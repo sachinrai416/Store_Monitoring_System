@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Store_Monitoring_Database',
         'USER': 'etl',
-        'PASSWORD': 'demopass',
+        'PASSWORD': 'XXXXXXXX',
         'HOST': 'localhost',
         'PORT': '5432',
     }
