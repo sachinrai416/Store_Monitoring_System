@@ -1,0 +1,24 @@
+The code is for calculating the uptime and downtime for a given store over the last hour, day, and week. It takes the store's status data, business hours data,
+and timezone data as inputs. The business hours data is used to determine the store's open and close times, and the timezone data is used to convert the timestamps 
+in the status data to local time. The uptime and downtime are calculated by grouping the status data by date and then iterating over each date to calculate the time
+the store was up and down for that day.
+
+The function get_store_timezone(store_id, timezone_df) retrieves the timezone for a given store based on the store_id parameter and the timezone_df dataframe.
+If no timezone is defined for the store, the function assumes it is in America/Chicago.
+
+The function get_business_hours(store_id, status_df, timezone_df, business_hours_df) retrieves the business hours for a given store based on the store_id parameter
+and the business_hours_df dataframe. It converts the timestamps in the status_df dataframe to local time using the store's timezone retrieved from the get_store_timezone function.
+
+The function calculate_uptime_downtime(store_id, store_status_df, business_hours_df, store_timezone_df) calculates the uptime and downtime for a given store.
+It uses the get_store_timezone and get_business_hours functions to retrieve the store's timezone and business hours data. It then groups the timestamps in the
+store_status_df dataframe by date and stores them in a dictionary. It iterates over the dates in the dictionary to calculate the uptime and downtime for each day.
+It determines the start and end times for each day based on the business hours data and then calculates the uptime and downtime for that day based on the timestamps
+in the store_status_df dataframe. The calculate_uptime_downtime_for_stores function uses the calculate_uptime_downtime function to calculate the uptime and downtime
+for the last hour, day, and week.
+
+IMPROVEMENTS:
+
+There are various ways to calculate the uptime and downtime for this store_monitoring problem. I am using the csv files directly to read and perform the necessary calculations. 
+Database reading could have been better. Whatever, the result had a great time learning with python and django, Already fill much better command over python. Thanks a lot for this.
+
+MUCH APPRECIATED!!!!
